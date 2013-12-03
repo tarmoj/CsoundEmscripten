@@ -1,0 +1,5 @@
+; This is the starting index file
+; Write stuff about emscripten here
+; 
+;
+;
