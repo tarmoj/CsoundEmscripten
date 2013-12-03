@@ -1,3 +1,4 @@
+;Widget Test
 <CsoundSynthesizer>
 <CsOptions>
 </CsOptions>
