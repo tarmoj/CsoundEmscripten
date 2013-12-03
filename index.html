@@ -44,6 +44,11 @@ perform = function()
 	csoundObj.startAudioCallback();
 }
 
+stop = function()
+{
+	csoundObj.stopAudioCallback();
+}
+
 var fileReader = new FileReader();
 
 var file;
@@ -94,6 +99,7 @@ function loadContent(elementSelector, sourceUrl) {
 
 				<button class="button" onclick="compile();">Compile</button>
 				<button class="button" onclick="perform();">Perform</button>
+				<button class="button" onclick="stop();">Stop</button>
 
 				<textarea id="editor"></textarea> 
 				<script>
