@@ -8,4 +8,7 @@
 ; Tests can be found on the left side bar and are loaded by clicking on the links.
 ; They can be run by compiling then running the code in the text editor by pressing the Compile then Perform buttons.
 ; The Mic Input test will not work on Safari because that hasn't implemented audio input yet.
+; 
+; Each test csd can also be edited using the text editor.
+; The text editor component used is CodeMirror available from http://codemirror.net/
 
