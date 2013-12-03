@@ -66,7 +66,7 @@ h3 {
 }
 
 li, h4 {
-	margin: 0.8em 0 0.5em 0;
+	margin: 0.8em -0em 0.5em -2em;
 	color: #333;
 	font-weight: normal;
 	font-family: 'Orienta', sans-serif;

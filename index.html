@@ -98,17 +98,17 @@ function loadContent(elementSelector, sourceUrl) {
 				<textarea id="editor"></textarea> 
 				<script>
 textEditor = CodeMirror.fromTextArea(document.getElementById("editor"),
-				     {theme:"eclipse",lineNumbers: true,matchBrackets: true,mode: "htmlmixed"});
+				     {lineWrapping:true, theme:"eclipse",lineNumbers: true,matchBrackets: true,mode: "htmlmixed"});
 setEditorContentsFromFile("index.txt");
 				</script>
 			</div>
 			<div class="col2">
 				<h2>Tests</h2>
 				<ul>
-					<li><a href="javascript:loadContent('#widgets', 'tests/test1.html');setEditorContentsFromFile(&quot;tests/test1.csd&quot;);">Test 1</a><li>
-					<li><a href="javascript:loadContent('#widgets', 'tests/test2.html');setEditorContentsFromFile(&quot;tests/test2.csd&quot;);">Test 2</a><li>
-					<li><a href="javascript:loadContent('#widgets', 'tests/test3.html');setEditorContentsFromFile(&quot;tests/test3.csd&quot;);">Test 3</a><li>
-					<li><a href="javascript:loadContent('#widgets', 'tests/test4.html');setEditorContentsFromFile(&quot;tests/test4.csd&quot;);">Test 4</a><li>
+					<li><a href="javascript:loadContent('#widgets', 'tests/test1.html');setEditorContentsFromFile(&quot;tests/test1.csd&quot;);">Simple Test</a><li>
+					<li><a href="javascript:loadContent('#widgets', 'tests/test2.html');setEditorContentsFromFile(&quot;tests/test2.csd&quot;);">Audio File Test</a><li>
+					<li><a href="javascript:loadContent('#widgets', 'tests/test3.html');setEditorContentsFromFile(&quot;tests/test3.csd&quot;);">Mic Input Test</a><li>
+					<li><a href="javascript:loadContent('#widgets', 'tests/test4.html');setEditorContentsFromFile(&quot;tests/test4.csd&quot;);">Widget Test</a><li>
 				</ul>
 			</div>
 			<div class="col3">
