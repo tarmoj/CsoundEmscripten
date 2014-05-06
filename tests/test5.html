@@ -1,0 +1,25 @@
+<html>
+<div>
+<script>
+<![CDATA[
+
+var slider1Channel = csoundObj.addControlChannel("/3/xy", 0);
+var checkboxChannel = csoundObj.addControlChannel("/3/xy/z", 0);
+FS.mkdir('/audiofiles');
+function uploadAudioFileCallback () {
+	
+	var data = new Uint8Array(this.response);
+	var stream = FS.open('/audiofiles/Background.wav', 'w+');
+	FS.write(stream, data, 0, data.length, 0);
+	FS.close(stream);
+
+	console.log("we have a file");
+}
+
+loadFile('audiofiles/background.wav', "arraybuffer", uploadAudioFileCallback);
+]]>
+</script>
+
+</div>
+<p>OSC test</p>
+</html>
