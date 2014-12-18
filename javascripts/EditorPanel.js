@@ -31,6 +31,12 @@ define('EditorPanel', ["ORCSCOEditor", "CSDEditor"], function(ORCSCOEditor, CSDE
 			csound.compileCSD(csdEditor.currentFilePath);
 		};
 
+		var renderButton = document.getElementById("RenderButton");
+		renderButton.onclick = function() {
+
+			csound.render();
+		};
+
 		var performButton = document.getElementById("PerformButton");
 		performButton.onclick = function() {
 
