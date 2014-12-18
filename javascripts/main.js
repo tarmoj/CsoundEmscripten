@@ -49,7 +49,8 @@ function main() {
 		fileManager.fileUploadFromServer("controlInputTest.csd", fileUploadedCallback);
 		fileManager.fileUploadFromServer("test.orc", fileUploadedCallback);
 		fileManager.fileUploadFromServer("audioInputTest.csd", fileUploadedCallback);
-
+		fileManager.fileUploadFromServer("Boulanger-Trapped_in_Convert.csd", fileUploadedCallback);
+		
 		fileUploadedCallback = function() {
 
 			filePanel.populateList();
