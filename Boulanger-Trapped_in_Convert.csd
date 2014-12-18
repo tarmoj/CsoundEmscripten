@@ -1,6 +1,6 @@
 <CsoundSynthesizer>
 <CsOptions>
-
+-n
 </CsOptions>
 <CsInstruments>
 ;============================================================================;
