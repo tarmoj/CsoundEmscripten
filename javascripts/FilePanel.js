@@ -22,10 +22,13 @@ define('FilePanel', ["libcsound"], function() {
 				}
 			}
 		}
+
+
+		this.fileNameDiv = document.createElement('div');
+		this.fileNameDiv.id = "FileNames";
 		this.populateList = function() {
 
-			listElement.innerHTML = "";
-			var container = document.createElement('div');
+			that.fileNameDiv.innerHTML = "";
 			var fileList = fileListObject.getFileList();
 			that.fileLinks = [];
 			for (var i = 0; i < fileList.length; ++i) {
@@ -47,11 +50,11 @@ define('FilePanel', ["libcsound"], function() {
 					link.className = "list-group-item";
 				}
 				link.onclick = onClickFunction;
-				container.appendChild(link);
+				that.fileNameDiv.appendChild(link);
 				that.fileLinks.push(link);
 			}
 
-			listElement.appendChild(container);
+			listElement.appendChild(that.fileNameDiv);
 		};
 
 

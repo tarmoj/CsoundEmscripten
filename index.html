@@ -18,25 +18,12 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="#">Csound Emscripten</a>
 			</div>
 		</div>
 		</nav>
 
 		<div class="container theme-showcase" role="main">
-
-			<!-- Main jumbotron for a primary marketing message or call to action -->
-			<!--<div class="jumbotron">-->
-				<!--<h1>Csound Emscripten</h1>-->
-				<!--</div>-->
-
-
 			<div class="row">
 				<div class="col-sm-8">
 					<div class="panel panel-primary" id="EditorPanel">
@@ -56,6 +43,8 @@
 
 						<div class="panel-body" id="EditorSection">
 
+							<div id="ORCEditor"></div>
+							<div id="SCOEditor"></div>
 						</div>
 					</div>
 					<div class="panel panel-primary" id="ConsolePanel">
@@ -95,12 +84,12 @@
 							</br>
 							<div class="btn-group btn-group" role="group">
 
-								  <label class="btn btn-primary btn-sm">
+								  <label class="btn btn-primary btn-sm" id="AudioInputCheckbox">
 
 									  <input id="AudioInputButton" type="checkbox"> Audio Input
 								  </label>
 
-								  <label class="btn btn-primary btn-sm">
+								  <label class="btn btn-primary btn-sm" id="MidiInputCheckbox">
 
 									  <input id="MidiInputButton" type="checkbox"> Midi Input
 								  </label>
@@ -110,7 +99,7 @@
 					</div>
 					<div class="panel panel-primary" id="FilePanel">
 						<div class="panel-heading">
-							<label class="btn btn-primary btn-sm" for="FileButton">
+							<label class="btn btn-primary btn-sm" for="FileButton" id="FileUploadButton">
 								<input id="FileButton" type="file" style="display:none;">
 								Upload Files
 							</label>

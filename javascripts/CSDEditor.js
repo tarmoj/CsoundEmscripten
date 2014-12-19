@@ -3,7 +3,7 @@ define('CSDEditor', ["ace/ace"], function(ace) {
 
 		var that = this;
 		this.csdEditorDiv = document.createElement("div");
-		this.csdEditorDiv.id = "csdEditor";
+		this.csdEditorDiv.id = "CSDEditor";
 		this.editor = ace.edit(this.csdEditorDiv);
 		this.editor.setTheme("ace/theme/github");
 		this.editor.getSession().setMode("ace/mode/javascript");

@@ -7,7 +7,7 @@ define('ConsolePanel', ["ace/ace"], function(ace) {
 		var parentDiv = document.getElementById("ConsoleSection");
 		var consoleDiv = document.createElement("div");
 		parentDiv.appendChild(consoleDiv);
-		consoleDiv.id = "console";
+		consoleDiv.id = "ConsoleOutput";
 		var editor = ace.edit(consoleDiv);
 		editor.setTheme("ace/theme/monokai");
 		editor.getSession().setMode("ace/mode/text");

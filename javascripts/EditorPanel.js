@@ -3,11 +3,15 @@ define('EditorPanel', ["ORCSCOEditor", "CSDEditor"], function(ORCSCOEditor, CSDE
 	function EditorPanel(csound, fileManager) {
 
 		var editorParentDiv = document.getElementById("EditorSection");
+
+		var orcScoEditor = new ORCSCOEditor(editorParentDiv, csound, fileManager);
+		this.orcEditorDiv = orcScoEditor.orcEditorDiv;
+		this.scoEditorDiv = orcScoEditor.scoEditorDiv;
 		var csdEditor = new CSDEditor(editorParentDiv);
 		csdEditor.replaceParentDiv();
-		var orcScoEditor = new ORCSCOEditor(editorParentDiv, csound, fileManager);
 		var csdEditorButton = document.getElementById("CSDEditorButton");
 		var orcScoEditorButton = document.getElementById("ORCSCOEditorButton");
+
 
 		csdEditorButton.onclick = function() {
 
@@ -34,7 +38,7 @@ define('EditorPanel', ["ORCSCOEditor", "CSDEditor"], function(ORCSCOEditor, CSDE
 		var renderButton = document.getElementById("RenderButton");
 		renderButton.onclick = function() {
 
-			csound.render();
+			csound.render(csdEditor.currentFilePath);
 		};
 
 		var performButton = document.getElementById("PerformButton");

@@ -1,7 +1,6 @@
 require.config({
 	shim : {
 		"bootstrap" : { "deps" :['jquery']  },
-		"bootstrap-switch" : "bootstrap-switch.min",
 		"libcsound":"libcsound"
 
 	},
@@ -9,12 +8,11 @@ require.config({
 		ace: "ace",
 		"jquery" : "jquery",
 		"bootstrap" :  "bootstrap.min" ,
-		"bootstrap-switch" :  "bootstrap-switch.min" ,
 		"libcsound":"libcsound"	
 	}
 });
 
-require(["jquery", "bootstrap", "bootstrap-switch", "libcsound", "InputPanel", "ConsolePanel", "FileManager", "FilePanel", "HelpPanel", "EditorPanel"], main);
+require(["jquery", "bootstrap", "libcsound", "InputPanel", "ConsolePanel", "FileManager", "FilePanel", "HelpPanel", "EditorPanel"], main);
 
 
 function main() {
@@ -28,7 +26,6 @@ function main() {
 
 	Module['_main'] = function() {
 
-		var helpPanel = new HelpPanel();
 		var consolePanel = new ConsolePanel();
 		consolePanel.print("Welcome to Csound Emscripten!");
 
@@ -58,6 +55,9 @@ function main() {
 		};
 
 		fileManager.fileUploadFromServer("midiInputTest.csd", fileUploadedCallback);
+
+
+		var helpPanel = new HelpPanel(editorPanel.orcEditorDiv, editorPanel.scoEditorDiv, filePanel.fileNameDiv);
 	};
 };
 

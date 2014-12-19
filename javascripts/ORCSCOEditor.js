@@ -9,13 +9,13 @@ define('ORCSCOEditor', ["ace/ace"], function(ace) {
 		this.currentOrcFilePath = "";
 		this.currentScoFilePath = "";
 		this.orcEditorDiv = document.createElement("div");
-		this.orcEditorDiv.id = "orcEditor";
+		this.orcEditorDiv.id = "ORCEditor";
 
 		this.orcBackDiv = document.createElement("div");
 		this.orcBackDiv.id = "orcBack";
 		this.orcBackDiv.innerHTML = ".ORC";
 		this.scoEditorDiv = document.createElement("div");
-		this.scoEditorDiv.id = "scoEditor";
+		this.scoEditorDiv.id = "SCOEditor";
 
 		this.scoBackDiv = document.createElement("div");
 		this.scoBackDiv.id = "scoBack";
