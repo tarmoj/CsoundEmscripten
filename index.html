@@ -100,7 +100,13 @@
 							<div class="range range-primary">
 								<input id="ControlSlider"type="range" name="range" min="1" max="100" value="50">
 								<output id="ControlSliderValue">50</output>
-							</div>	
+							</div>
+							<br>
+							Value from Csound channel <!--TODO: better style-->
+							<div class="input-group">
+								<input id="getChannelName" type="text" class="form-control" value="test">
+								<span id="getChannelValue" class="input-group-addon">NA</span></br> <!--TODO: better style, correct heigth. Add comments to Help panel-->
+							</div>
 							</br>
 							<div class="btn-group btn-group" role="group">
 
@@ -114,7 +120,9 @@
 									  <input id="MidiInputButton" type="checkbox"> Midi Input
 								  </label>
 
+
 							</div>
+
 						</div>
 					</div>
 					<div class="panel panel-primary" id="FilePanel">

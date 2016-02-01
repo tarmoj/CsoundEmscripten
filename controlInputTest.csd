@@ -13,10 +13,20 @@ instr VCO2
     outs aVar, aVar
 endin
 
+instr channel_out
+	kvalue init 0
+	if (metro(1)==1) then
+		kvalue +=1
+		chnset kvalue,"test"
+		printk2 kvalue
+	endif
+endin
+
 
 </CsInstruments>
 <CsScore>
 i "VCO2" 0 10
+i "channel_out" 0 10
 
 </CsScore>
 </CsoundSynthesizer>

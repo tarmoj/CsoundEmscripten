@@ -25,14 +25,24 @@ define('InputPanel', [], function() {
 		var controlSlider = document.getElementById("ControlSlider");
 		var controlSliderValue = document.getElementById("ControlSliderValue");
 		var controlName = document.getElementById("ControlName");
-		var audioInputButton = document.getElementById("AudioInputButton");
+        var getChannelName = document.getElementById("getChannelName");
+        var getChannelValue = document.getElementById("getChannelValue");
+        var audioInputButton = document.getElementById("AudioInputButton");
 		var midiInputButton = document.getElementById("MidiInputButton");
+
 
 		controlSlider.oninput = function() {
 
 			controlSliderValue.value = controlSlider.value;
 			csound.setControlChannel(controlName.value, controlSlider.value);
+
 		};
+
+
+        var outputTimer = setInterval(function() { // TODO: take care when to start and stop the timer
+            var value = csound.getControlChannel(getChannelName.value);
+            getChannelValue.innerHTML = value.toFixed(2);
+        }, 100); // TODO: there might be better way to do it, maybe from some other already existing loop or callback...
 
 		audioInputButton.onchange = function() {
 
